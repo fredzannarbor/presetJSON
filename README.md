@@ -4,7 +4,7 @@ This is a simple standard for an extended JSON format for OpenAI GPT-3 presets. 
 
 ## Motivation
 
- 1. The OpenAI Playground enables users to save presets and to export them as web links or as **Python** and **curl** functions.  That's very useful, but if you have a codebase in which you have defined gpt3 objects (which is quite likely), you are not going to be able to simply paste the exported presets into your code. In fact, it winds up being an exercise in copying and pasting seven or eight different numerals from the preset export into your own code.  For this reason, it would be very helpful to have an option to export presets from the Playground in JSON.
+ 1. The [OpenAI Playground](https://beta.openai.com/playground) enables users to save presets and to export them as web links or as **Python** and **curl** functions.  That's very useful, but if you have a codebase in which you have defined gpt3 objects (which is quite likely), you are not going to be able to simply paste the exported presets into your code. In fact, it winds up being an exercise in copying and pasting seven or eight different numerals from the preset export into your own code.  For this reason, it would be very helpful to have an option to export presets from the Playground in JSON.
    
  2. Separating preset metadata from program logic makes it easier to add and maintain both prompts and code.  For example, in a Flask view file called *launcher.py*, I define a route function called 'launcher' that can open any one of a number of json files that I have created.
 
