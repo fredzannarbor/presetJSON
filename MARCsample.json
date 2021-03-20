@@ -1,0 +1,20 @@
+    {
+        "preset_name" : "MARC Subject Headings",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_launched": "20210220",
+        "preset_instructions": "Enter a topic below:",
+        "preset_description": "This preset generates subject headings in the MAchine-Readable Catalog (MARC) format used by the Library of Congress.",
+        "pre_user_input": "MARC Subject Headings \n\n1. ",
+        "post_user_input": "\n",
+        "engine": "davinci",
+        "temperature": 0.52,
+        "max_tokens": 100,
+        "top_p": 1,
+        "fp": 0.52,
+        "pp": 0.52,
+        "stop_sequence": "7.",
+        "echo_on": true,
+        "completion_heading" : "Response"
+    }
+]
