@@ -62,7 +62,7 @@ All are optional unless specified.  Program logic must be able to parse JSON eve
 
 **preset_description:** String.  What you want the user to know about the preset.
 
-**preset_instructions: **String. Directions to the user on how to enter input.
+**preset_instructions:** String. Directions to the user on how to enter input.
 
 **pre_user_input:** String.  Text to be prepended to the user input as part of the prompt.  New lines should be escaped.
 
