@@ -58,7 +58,7 @@ All are optional unless specified.  Program logic must be able to parse JSON eve
 
 **preset_active:** Boolean.  Convenient if you want to be able to hide test presets.
 
-**preset_launched: **Date.  Convenient if you want to be able to sort or filter presets by date.
+**preset_launched:** Date.  Convenient if you want to be able to sort or filter presets by date.
 
 **preset_description:** String.  What you want the user to know about the preset.
 
@@ -66,7 +66,7 @@ All are optional unless specified.  Program logic must be able to parse JSON eve
 
 **pre_user_input:** String.  Text to be prepended to the user input as part of the prompt.  New lines should be escaped.
 
-**post_user_input:**String. Text to be appended to user input as part of the prompt.
+**post_user_input:** String. Text to be appended to user input as part of the prompt.
 
 **completion_heading:** String.  Optionally prefixed to title of the response object as displayed in the UI.  For example, `{... "completion_heading" = "Ode to a " ...}` would allow the response to a poetry preset with the prompt "Nightingale" to be displayed  as "Ode to a Nightingale".
 
