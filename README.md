@@ -1,6 +1,6 @@
 # PresetJSON
 
-This is a simple standard for an extended JSON format for OpenAI GPT-3 presets. Presets are what OpenAI calls the set of parameters necessary to submit a request to the completion endpoint. 
+This is a simple standard for an extended JSON format for OpenAI GPT-3 presets. Presets are what OpenAI calls the set of parameters necessary to submit [a request to the completion endpoint](https://beta.openai.com/docs/api-reference/completions/create). 
 
 ## Motivation
 
