@@ -51,7 +51,7 @@ def launcher(prompt_name):
 
 ```
 
-The OpenAI Playground provides the fields from "engine to "presence penalty" in JSON format.
+The OpenAI Playground provides the fields from "engine to "presence penalty" in JSON format, so you can simply paste those in to replace the ones in this template.
 
 ## PresetJSON fields
 
