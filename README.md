@@ -4,7 +4,7 @@ This is a simple standard for an extended JSON format for OpenAI GPT-3 presets. 
 
 ## Motivation
 
- 1. The [OpenAI Playground](https://beta.openai.com/playground) enables users to save presets and to export them as web links or as **Python** and **curl** functions.  That's very useful, but if you have a codebase in which you have defined gpt3 objects (which is quite likely), you are not going to be able to simply paste the exported presets into your code. In fact, it winds up being an exercise in copying and pasting seven or eight different numerals from the preset export into your own code.  For this reason, it would be very helpful to have an option to export presets from the Playground in JSON.
+ 1. The [OpenAI Playground](https://beta.openai.com/playground) enables users to save presets and to export them as web links or as **Python**, **curl**, and **JSON** code objects functions.  That's very useful, but if you have a codebase in which you submit carefully tweaked prompts to OpenAI, you are not going to be able to simply paste the exported presets into your code. This data model provides a standard you can adopt to save yourself a little effort, and to make it easier to share detailed presets with other developers.
    
  2. Separating preset metadata from program logic makes it easier to add and maintain both prompts and code.  For example, in a Flask view file called *launcher.py*, I define a route function called 'launcher' that can open any one of a number of json files that I have created.
 
@@ -27,23 +27,25 @@ def launcher(prompt_name):
 ```
 [
     {
-        "preset_name" : "MARC Subject Headings",
+        "preset_name" : "Display Name for UI Widget",
         "preset_author": "Fred Zimmerman",
         "preset_active": "True",
-        "preset_launched": "20210220",
-        "preset_description": "This preset generates subject headings in the MAchine-Readable Catalog (MARC) format used by the Library of Congress.",
         "preset_instructions": "Enter a topic below:",
-        "pre_user_input": "MARC Subject Headings \n\n1. ",
-        "post_user_input": "\n", 
-        "completion_heading" : "Response",
+        "preset_description": "This preset generates ... ",
+        "pre_user_input" : "Instructions or examples that precede user input in prompt",
+        "post_user_input": "Instructions or examples that follow user input in prompt",
         "engine": "davinci",
+        "prompt": None,
         "temperature": 0.52,
         "max_tokens": 100,
         "top_p": 1,
-        "fp": 0.52,
-        "pp": 0.52,
+        "frequency_penalty": 0.52,
+        "presence_penalty": 0.52,
         "stop_sequence": "7.",
-        "echo_on": true
+        "echo_on": true,
+        "completion_heading" : "Response or something specific to the completion, e.g. Ideas",
+        "user" = "wfzimmerman",
+        "organization" = "openAIorgcode"
     }
 ]
 
@@ -52,15 +54,13 @@ def launcher(prompt_name):
 
 All are optional unless specified.  Program logic must be able to parse JSON even if fields are missing. Program should have reasonable defau,ts.
 
-**preset_name:** String.  As you wish the preset name to be presented to the user.
+**preset_name:** String.  As you wish the preset name to be presented to the user. This is what appears above the UI Widget.
 
 **preset_author:** String.  As you wish the author name to be presented to the user.
 
 **preset_active:** Boolean.  Convenient if you want to be able to hide test presets.
 
-**preset_launched:** Date.  Convenient if you want to be able to sort or filter presets by date.
-
-**preset_description:** String.  What you want the user to know about the preset.
+**preset_description:** String.  What you want the user to know about the preset.  What it's for, rather than how to use it.
 
 **preset_instructions:** String. Directions to the user on how to enter input.
 
@@ -74,8 +74,5 @@ All are optional unless specified.  Program logic must be able to parse JSON eve
 
 ## Uploading PresetJSON Files to Your Application
 
-This can be done using git or via file upload applications such as FileZilla.  Your application is responsible for finding, displaying, and opening PresetJSON files.  In my application, this is done with a for loop over a directory called `app/presets`.
+This can be done using git or via file upload applications such as FileZilla.  Your application is responsible for finding, displaying, and opening any available PresetJSON files.  In my application, this is done with a for loop over a directory called `app/presets`, or by opening a particular preset file.
 
-## How to Submit Your Own Presets to Nimble AI
-
-Use the online form, or use the file picker to upload a valid JSON file
