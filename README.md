@@ -4,7 +4,7 @@ This is a simple standard for an extended JSON format for OpenAI GPT-3 presets. 
 
 ## Motivation
 
- 1. The [OpenAI Playground](https://beta.openai.com/playground) enables users to save presets and to export them as web links or as **Python**, **curl**, and **JSON** code objects functions.  That's very useful, but if you have a codebase in which you submit carefully tweaked prompts to OpenAI, you are not going to be able to simply paste the exported presets into your code. This data model provides a standard you can adopt to save yourself a little effort, and to make it easier to share detailed presets with other developers.
+ 1. The [OpenAI Playground](https://beta.openai.com/playground) enables users to save presets and to export them as web links or as **Python**, **curl**, and **JSON** code objects.  That's very useful, but if you have a codebase in which you submit carefully tweaked prompts to OpenAI, you are not going to be able to simply paste the exported presets into your code. This data model provides a standard you can adopt to save yourself a little effort, and to make it easier to share detailed presets with other developers.
    
  2. Separating preset metadata from program logic makes it easier to add and maintain both prompts and code.  For example, in a Flask view file called *launcher.py*, I define a route function called 'launcher' that can open any one of a number of json files that I have created.
 
