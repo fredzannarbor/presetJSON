@@ -50,6 +50,9 @@ def launcher(prompt_name):
 ]
 
 ```
+
+The OpenAI Playground provides the fields from "engine to "presence penalty" in JSON format.
+
 ## PresetJSON fields
 
 All are optional unless specified.  Program logic must be able to parse JSON even if fields are missing. Program should have reasonable defau,ts.
