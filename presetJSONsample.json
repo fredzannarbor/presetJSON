@@ -15,9 +15,9 @@
         "presence_penalty": 0.52,
         "stop_sequence": "7.",
         "echo_on": true,
-        "completion_heading" : "Response or something specific to the completion, e.g. 'Ideas'",
-         "user" = "wfzimmerman",
-         "organization" = "openAIorgcode"
+        "completion_heading" : "Response or something specific to the completion, e.g. Ideas",
+        "user" = "wfzimmerman",
+        "organization" = "openAIorgcode"
     }
 ]
 
